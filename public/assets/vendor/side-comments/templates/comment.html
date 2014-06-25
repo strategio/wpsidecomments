@@ -1,0 +1,14 @@
+<li data-comment-id="<%= comment.id %>">
+  <div class="author-avatar">
+    <img src="<%= comment.authorAvatarUrl %>">
+  </div>
+  <p class="author-name">
+    <%= comment.authorName %>
+  </p>
+  <p class="comment">
+    <%= comment.comment %>
+  </p>
+  <% if (currentUser && comment.authorId === currentUser.id){ %>
+  <a href="#" class="action-link delete">Delete</a>
+  <% } %>
+</li>
