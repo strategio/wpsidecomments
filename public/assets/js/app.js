@@ -30,27 +30,36 @@ jQuery(document).ready(function ($) {
 			});
 	}
 
+	// Case comments closed
+	if(!wpSideComments.commentsAllowed) {
+		$('.commentable-section .add-comment').text(wpSideComments.translations.commentsAreNotAllowed).removeClass('add-comment');
+	}
+
 	// Listen to "commentPosted", and send a request to your backend to save the comment.
 	// More about this event in the "docs" section.
 	sideComments.on('commentPosted', function( comment ) {
-		comment.wpNonce = wpSideComments.wpNonce;
-		comment.postId = wpSideComments.postId;
-	    $.ajax({
-	        url: wpSideComments.url + '?action=addWPSideComment',
-	        type: 'POST',
-	        data: comment,
-	        success: function( commentId ) {
-	            // Once the comment is saved, you can insert the comment into the comment stream with "insertComment(comment)".
-	            if(!isNaN(commentId)) {
-	            	comment.commentId = commentId;
-	            	//console.log(comment);
-	            	sideComments.insertComment(comment);
-	            } else {
-	            	alert(commentId);
-	            }
-	            	
-	        }
-	    });
+		if(wpSideComments.commentsAllowed) {
+			comment.wpNonce = wpSideComments.wpNonce;
+			comment.postId = wpSideComments.postId;
+		    $.ajax({
+		        url: wpSideComments.url + '?action=addWPSideComment',
+		        type: 'POST',
+		        data: comment,
+		        success: function( commentId ) {
+		            // Once the comment is saved, you can insert the comment into the comment stream with "insertComment(comment)".
+		            if(!isNaN(commentId)) {
+		            	comment.commentId = commentId;
+		            	//console.log(comment);
+		            	sideComments.insertComment(comment);
+		            } else {
+		            	alert(commentId);
+		            }
+		            	
+		        }
+		    });
+		} else {
+			alert(wpSideComments.translations.commentsAreNotAllowed);
+		}
 	});
 	 
 	// Listen to "commentDeleted" and send a request to your backend to delete the comment.

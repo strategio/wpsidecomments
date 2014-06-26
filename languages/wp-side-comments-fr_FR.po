@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/plugins/plugin-name\n"
-"POT-Creation-Date: 2014-06-25 15:12-0300\n"
-"PO-Revision-Date: 2014-06-25 15:12-0300\n"
+"POT-Creation-Date: 2014-06-25 22:39-0300\n"
+"PO-Revision-Date: 2014-06-25 22:41-0300\n"
 "Last-Translator: \n"
 "Language-Team: Strategio <strategio@strategio.fr>\n"
 "Language: Français\n"
@@ -23,26 +23,54 @@ msgstr ""
 "X-Poedit-SearchPath-1: C:\\wamp\\www\\wordpress.dev\\wp-content\\plugins\\wp-"
 "side-comments\\public\\assets\\vendor\\side-comments\\release\n"
 
-#: admin/class-wp-side-comments-admin.php:190
-msgid "Page Title"
+#: admin/class-wp-side-comments-admin.php:132
+msgid "WP Side Comments"
 msgstr ""
 
-#: admin/class-wp-side-comments-admin.php:191
-msgid "Menu Text"
+#: admin/class-wp-side-comments-admin.php:133
+msgid "WPSC"
 msgstr ""
 
-#: admin/class-wp-side-comments-admin.php:217
+#: admin/class-wp-side-comments-admin.php:170
 msgid "Settings"
-msgstr ""
+msgstr "Réglages"
 
-#: public/class-wp-side-comments.php:292
+#: admin/views/admin.php:24
+msgid "Content Selector"
+msgstr "Sélecteur de contenu"
+
+#: admin/views/admin.php:27
+msgid "class or id to target content area"
+msgstr "class ou id cible pour la zone de contenu"
+
+#: admin/views/admin.php:31
+msgid "Comment Selector"
+msgstr "Sélecteur de commentaires"
+
+#: admin/views/admin.php:34
+msgid "class or id to target comment area"
+msgstr "class ou id cible pour la zone de commentaires"
+
+#: admin/views/admin.php:43
+msgid "Save settings"
+msgstr "Enregistrer les changements"
+
+#: public/class-wp-side-comments.php:295
 msgid "Leave a comment"
 msgstr "Laisser un commentaire"
 
-#: public/class-wp-side-comments.php:293 public/class-wp-side-comments.php:297
+#: public/class-wp-side-comments.php:296
 msgid "Post"
 msgstr "Envoyer"
 
-#: public/class-wp-side-comments.php:294
+#: public/class-wp-side-comments.php:297
 msgid "Cancel"
 msgstr "Annuler"
+
+#: public/class-wp-side-comments.php:298
+msgid "Login or Sign in to comment"
+msgstr "Connectez-vous ou Inscrivez-vous pour commenter"
+
+#: public/class-wp-side-comments.php:299
+msgid "Comments are not allowed"
+msgstr "Les commentaires sont fermés"

@@ -255,6 +255,7 @@ class WP_Side_Comments {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
+
 		// Just for posts, pages and CPTs
 		if(!is_singular())
 			return;
@@ -289,11 +290,13 @@ class WP_Side_Comments {
 				'postId' => $post->ID,
 				'wpNonce' => wp_create_nonce( 'wpSideComments' ),
 				'loginLink' => wp_login_url(),
+				'commentsAllowed' => comments_open($post->ID),
 				'translations' => array(
 						'leaveAComment' => __('Leave a comment', $this->plugin_slug ),
 						'post' => __('Post', $this->plugin_slug ),
 						'cancel' => __('Cancel', $this->plugin_slug ),
-						'logInOrSignInToComment' => __('Login or Sign in to comment', $this->plugin_slug)
+						'logInOrSignInToComment' => __('Login or Sign in to comment', $this->plugin_slug),
+						'commentsAreNotAllowed' => __('Comments are not allowed', $this->plugin_slug)
 					)
 			));
 	}
