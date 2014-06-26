@@ -1,4 +1,5 @@
-=== WP Side Comments ===
+# WP Side Comments
+
 Contributors: strategio
 Donate link: http://donate.strategio.fr/?label=Donation%20for%20NoSpam%20plugin
 Tags: comments, medium, side, section
@@ -10,26 +11,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Add commentable sections on WordPress (using [SideComments.js](http://aroc.github.io/side-comments-demo/))
 
-== Description ==
+## Description
 
 WP Side Comments create a new way to display comments like in medium.com network.
 It's based on [SideComment.js](http://aroc.github.io/side-comments-demo/)
 
 
-== Installation ==
+## Installation
 
 This section describes how to install the plugin and get it working.
 
 e.g.
 
-= Using The WordPress Dashboard =
+### Using The WordPress Dashboard
 
 1. Navigate to the 'Add New' in the plugins dashboard
 2. Search for 'plugin-name'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 
-= Uploading in WordPress Dashboard =
+### Uploading in WordPress Dashboard
 
 1. Navigate to the 'Add New' in the plugins dashboard
 2. Navigate to the 'Upload' area
@@ -37,7 +38,7 @@ e.g.
 4. Click 'Install Now'
 5. Activate the plugin in the Plugin dashboard
 
-= Using FTP =
+### Using FTP
 
 1. Download `plugin-name.zip`
 2. Extract the `wp-side-comments` directory to your computer
@@ -45,15 +46,15 @@ e.g.
 4. Activate the plugin in the Plugin dashboard
 
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
 
-== Screenshots ==
+## Screenshots
 
 
-== Changelog ==
+## Changelog
 
-= 1.0.0 =
+### 1.0.0
 * First Release
 
-== Upgrade Notice ==
+## Upgrade Notice
