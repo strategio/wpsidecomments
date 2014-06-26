@@ -6,7 +6,6 @@ jQuery(document).ready(function ($) {
 
 	// Insert attribs to <p>
 	$(wpSideComments.contentSelector + ' p').each(function(i, el){
-		//console.log(el);
 		$(el).addClass('commentable-section').attr('data-section-id', i);
 	});
 
@@ -44,7 +43,7 @@ jQuery(document).ready(function ($) {
 	            // Once the comment is saved, you can insert the comment into the comment stream with "insertComment(comment)".
 	            if(!isNaN(commentId)) {
 	            	comment.commentId = commentId;
-	            	console.log(comment);
+	            	//console.log(comment);
 	            	sideComments.insertComment(comment);
 	            } else {
 	            	alert(commentId);
