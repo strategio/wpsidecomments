@@ -14,7 +14,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP Side Comments
  * Plugin URI:        http://www.strategio.fr
- * Description:       @TODO
+ * Description:       WP Side Comments create a new way to display comments like in medium.com network. It's based on SideComment.js
  * Version:           1.0.0
  * Author:            Pierre SYLVESTRE
  * Author URI:        http://www.strategio.fr
