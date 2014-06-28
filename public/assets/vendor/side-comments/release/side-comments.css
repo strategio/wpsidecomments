@@ -183,3 +183,49 @@
   -webkit-animation: fadein 0.2s;
   animation: fadein 0.2s;
 }
+
+@media (max-width: 768px) {
+  .side-comments-open {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .commentable-section {
+    padding-right: 40px;
+  }
+  .side-comment {
+    right: 0;
+    width: 100%;
+  }
+  .side-comment .marker {
+    right: 10px;
+  }
+
+  .side-comment .comments-wrapper {
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    z-index: 5;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #F2F2F0;
+    -webkit-box-shadow: 0 0 7px 0px #ccc;
+    -moz-box-shadow: 0 0 7px 0px #ccc;
+    box-shadow: 0 0 7px 0px #ccc;
+  }
+
+  .side-comment.has-comments .comments-wrapper {
+    top: 0;
+  }
+
+  .side-comment .author-name {
+    max-width: 100%;
+  }
+
+  .side-comment .comments li:first-child,
+  .side-comment .comment-form {
+    border: none;
+  }
+
+}

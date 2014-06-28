@@ -412,12 +412,15 @@ class WP_Side_Comments {
 	private function get_comments() {
 		global $post, $wpdb;
 
+		$comment_order = strtoupper(get_option('comment_order', 'asc'));
+
 		$query = $wpdb->prepare( "SELECT *
 				FROM $wpdb->comments c
 				LEFT JOIN $wpdb->commentmeta cm ON c.comment_ID = cm.comment_id
 				LEFT JOIN $wpdb->users u ON c.user_id = u.ID
 				WHERE c.comment_post_ID = %s
 					AND c.comment_approved = 1
+				ORDER BY c.comment_ID $comment_order
 				",
 				$post->ID);
 
