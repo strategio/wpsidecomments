@@ -18,7 +18,7 @@ class WP_Side_Comments {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.5';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -324,7 +324,7 @@ class WP_Side_Comments {
 		    'comment_post_ID' => $_POST['postId'],
 		    'comment_author' => $user->data->display_name,
 		    'comment_author_email' => $user->data->user_email,
-		    'comment_author_url' => '',
+		    'comment_author_url' => $user->data->user_url,
 		    'comment_content' => $_POST['comment'],
 		    'comment_type' => '',
 		    'comment_parent' => 0,

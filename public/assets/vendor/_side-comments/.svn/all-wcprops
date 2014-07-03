@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/LICENSE
+END
+gulpfile.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/gulpfile.js
+END
+package.json
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/package.json
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/.gitignore
+END
+bower.json
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/bower.json
+END
+demo.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/demo.html
+END
+component.json
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/component.json
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/942823/wp-side-comments/trunk/public/assets/vendor/_side-comments/README.md
+END

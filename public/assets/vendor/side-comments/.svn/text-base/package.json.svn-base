@@ -1,0 +1,14 @@
+{
+  "name": "side-comments",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-minify-css": "*",
+    "gulp-less": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-rename": "*"
+  }
+}

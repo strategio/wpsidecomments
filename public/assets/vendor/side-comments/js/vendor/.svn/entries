@@ -1,0 +1,28 @@
+8
+
+dir
+942823
+http://plugins.svn.wordpress.org/wp-side-comments/trunk/public/assets/vendor/side-comments/js/vendor
+http://plugins.svn.wordpress.org
+
+
+
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+
+
+svn:special svn:externals svn:needs-lock
+
+lodash-custom.js
+file
+
+
+
+
+2014-07-03T12:10:54.000000Z
+23cb0d3dff5913780d18d3916e4ad3fc
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+

@@ -1,0 +1,67 @@
+8
+
+dir
+942823
+http://plugins.svn.wordpress.org/wp-side-comments/trunk/public/assets/vendor/side-comments/release
+http://plugins.svn.wordpress.org
+
+
+
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+
+
+svn:special svn:externals svn:needs-lock
+
+side-comments.min.css
+file
+
+
+
+
+2014-07-03T12:10:54.000000Z
+b242f721aa98c84ea9d5235bd98f2513
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+
+side-comments.js
+file
+
+
+
+
+2014-07-03T12:10:54.000000Z
+59eb1a62d0e3be4a2b97425b61561505
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+
+side-comments.min.js
+file
+
+
+
+
+2014-07-03T12:10:54.000000Z
+d5106af9c0072cb19a44d3692a4f387b
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+
+themes
+dir
+
+side-comments.css
+file
+
+
+
+
+2014-07-03T12:10:54.000000Z
+0a5cbe9bf07b3f64e8576018a139439d
+2014-07-03T12:33:13.355234Z
+942823
+strategio
+
