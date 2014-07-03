@@ -1,21 +1,19 @@
 # WP Side Comments
 
-Contributors: strategio
-Donate link:http://donate.strategio.fr/?label=Donation%20for%20WP%20Side%20Comments%20plugin
-Tags: comments, medium, side, section
-Requires at least: 3.5.1
-Tested up to: 3.9
-Stable tag: 1.0.5
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 Add commentable sections on WordPress (using [SideComments.js](http://aroc.github.io/side-comments-demo/))
 
 ## Description
 
 WP Side Comments create a new way to display comments like in medium.com network.
-It's based on [SideComment.js](http://aroc.github.io/side-comments-demo/)
+It's based on [SideComment.js][1]
 
+Visit [strategio.fr/projet/wp-side-comments][2] for a live demo 
+
+Or visit WordPress repository plugin page [WP Side Comments][3]
+
+ [1]: http://aroc.github.io/side-comments-demo/ "See project"
+ [2]: http://www.strategio.fr/projet/wp-side-comments/ "See project page"
+ [3]: http://wordpress.org/plugins/wp-side-comments/ "See WordPress page"
 
 ## Installation
 
