@@ -7,14 +7,12 @@
   "scripts": [
     "js/main.js",
     "js/section.js",
-    "js/vendor/lodash-custom.js"
+    "js/vendor/lodash-custom.js",
+    "js/helpers/mobile-check.js"
   ],
   "main": "js/main.js",
   "templates": [
     "templates/section.html",
     "templates/comment.html"
-  ],
-  "styles": [
-    "css/styles.css"
   ]
 }

@@ -1,6 +1,7 @@
 var _ = require('./vendor/lodash-custom.js');
 var Template = require('../templates/section.html');
 var CommentTemplate = require('../templates/comment.html');
+var mobileCheck = require('./helpers/mobile-check.js');
 
 /**
  * Creates a new Section object, which is responsible for managing a
@@ -13,15 +14,15 @@ function Section( eventPipe, $el, currentUser, comments ) {
 	this.$el = $el;
 	this.comments = comments ? comments.comments : [];
 	this.currentUser = currentUser || null;
+	this.clickEventName = mobileCheck() ? 'touchstart' : 'click';
 	
 	this.id = $el.data('section-id');
 
-	this.$el.on('click', '.side-comment .marker', _.bind(this.markerClick, this));
-	this.$el.on('click', '.side-comment .add-comment', _.bind(this.addCommentClick, this));
-	this.$el.on('click', '.side-comment .post', _.bind(this.postCommentClick, this));
-	this.$el.on('click', '.side-comment .cancel', _.bind(this.cancelCommentClick, this));
-	this.$el.on('click', '.side-comment .delete', _.bind(this.deleteCommentClick, this));
-
+	this.$el.on(this.clickEventName, '.side-comment .marker', _.bind(this.markerClick, this));
+	this.$el.on(this.clickEventName, '.side-comment .add-comment', _.bind(this.addCommentClick, this));
+	this.$el.on(this.clickEventName, '.side-comment .post', _.bind(this.postCommentClick, this));
+	this.$el.on(this.clickEventName, '.side-comment .cancel', _.bind(this.cancelCommentClick, this));
+	this.$el.on(this.clickEventName, '.side-comment .delete', _.bind(this.deleteCommentClick, this));
 	this.render();
 }
 
@@ -31,15 +32,8 @@ function Section( eventPipe, $el, currentUser, comments ) {
  */
 Section.prototype.markerClick = function( event ) {
 	event.preventDefault();
-	
-	if (this.isSelected()) {
-		this.deselect();
-		this.eventPipe.emit('sectionDeselected', this);
-	} else {
-		this.select();
-		this.eventPipe.emit('sectionSelected', this);
-	}
-}
+	this.select();
+};
 
 /**
  * Callback for the comment button click event.
@@ -82,7 +76,12 @@ Section.prototype.hideCommentForm = function() {
  * Focus on the comment box in the comment form.
  */
 Section.prototype.focusCommentBox = function() {
-	this.$el.find('.comment-box').get(0).focus();
+	// NOTE: !!HACK!! Using a timeout here because the autofocus causes a weird
+	// "jump" in the form. It renders wider than it should be on screens under 768px
+	// and then jumps to a smaller size.
+	setTimeout(_.bind(function(){
+		this.$el.find('.comment-box').get(0).focus();
+	}, this), 300);
 };
 
 /**
@@ -119,17 +118,17 @@ Section.prototype.postCommentClick = function( event ) {
  * Post a comment to this section.
  */
 Section.prototype.postComment = function() {
-	this.$el.find(".comment-box").children().not("br").each(function() {
-		$(this).replaceWith(this.innerHTML);
-	});
-  var commentBody = this.$el.find('.comment-box').html();
+	var $commentBox = this.$el.find('.comment-box');
+  var commentBody = $commentBox.val();
   var comment = {
   	sectionId: this.id,
   	comment: commentBody,
   	authorAvatarUrl: this.currentUser.avatarUrl,
   	authorName: this.currentUser.name,
-  	authorId: this.currentUser.id
+  	authorId: this.currentUser.id,
+  	authorUrl: this.currentUser.authorUrl || null
   };
+  $commentBox.val(''); // Clear the comment.
   this.eventPipe.emit('commentPosted', comment);
 };
 
@@ -192,13 +191,20 @@ Section.prototype.removeComment = function( commentId ) {
 };
 
 /**
- * Mark this section as selected.
+ * Mark this section as selected. Delsect if this section is already selected.
  */
 Section.prototype.select = function() {
-	this.$el.find('.side-comment').addClass('active');
+	if (this.isSelected()) {
+		this.deselect();
+		this.eventPipe.emit('sectionDeselected', this);
+	} else {
+		this.$el.find('.side-comment').addClass('active');
 
-	if (this.comments.length === 0 && this.currentUser) {
-	  this.focusCommentBox();
+		if (this.comments.length === 0 && this.currentUser) {
+		  this.focusCommentBox();
+		}
+
+		this.eventPipe.emit('sectionSelected', this);
 	}
 };
 

@@ -1,7 +1,6 @@
 var _ = require('./vendor/lodash-custom.js');
 var Section = require('./section.js');
 var Emitter = require('emitter');
-var eventPipe = new Emitter;
 
 /**
  * Creates a new SideComments instance.
@@ -19,7 +18,7 @@ var eventPipe = new Emitter;
 function SideComments( el, currentUser, existingComments ) {
   this.$el = $(el);
   this.$body = $('body');
-  this.eventPipe = eventPipe;
+  this.eventPipe = new Emitter;
 
   this.currentUser = _.clone(currentUser) || null;
   this.existingComments = _.cloneDeep(existingComments) || [];
@@ -35,7 +34,6 @@ function SideComments( el, currentUser, existingComments ) {
   this.eventPipe.on('commentDeleted', _.bind(this.commentDeleted, this));
   this.eventPipe.on('addCommentAttempted', _.bind(this.addCommentAttempted, this));
   this.$body.on('click', _.bind(this.bodyClick, this));
-
   this.initialize(this.existingComments);
 }
 

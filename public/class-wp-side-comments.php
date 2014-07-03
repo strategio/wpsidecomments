@@ -447,6 +447,7 @@ class WP_Side_Comments {
 			$existingComments[$sectionId]->comments[] = array(
 					'authorAvatarUrl'=> !empty($comment->user_email) ? $this->get_avatar_url(get_avatar($comment->user_email)) : $this->get_avatar_url(get_avatar($comment->comment_author_email)),
 					'authorName'=> !empty($comment->display_name) ? $comment->display_name : $comment->comment_author,
+					'authorUrl' => !empty($comment->comment_author_url) ? $comment->comment_author_url : null,
 					'comment'=> $comment->comment_content
 				);
 
