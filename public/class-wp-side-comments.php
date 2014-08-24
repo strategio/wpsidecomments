@@ -295,7 +295,7 @@ class WP_Side_Comments {
 						'leaveAComment' => __('Leave a comment', $this->plugin_slug ),
 						'post' => __('Post', $this->plugin_slug ),
 						'cancel' => __('Cancel', $this->plugin_slug ),
-						'logInOrSignInToComment' => __('Login or Sign in to comment', $this->plugin_slug),
+						'logInOrSignInToComment' => __('Login or Register to comment', $this->plugin_slug),
 						'commentsAreNotAllowed' => __('Comments are not allowed', $this->plugin_slug)
 					)
 			));
